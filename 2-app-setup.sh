@@ -46,11 +46,14 @@ sudo git clone {url}
 
 sudo cp .env.example .env
 
+# sudo rm /var/www/html/hng/vendor/mehedi-iitdu/core-component-repository/src/CoreComponentRepository.php
+# sudo nano /var/www/html/hng/vendor/mehedi-iitdu/core-component-repository/src/CoreComponentRepository.php
+
 
 find . -type f -exec chmod 644 {} \;
 find . -type d -exec chmod 755 {} \;
 
-chown -R www-data:www-data .
+chown -R ubuntu:ubuntu .
 chmod -R 755 .
 chmod -R 777 storage
 chmod -R 777 storage/ *
@@ -67,4 +70,5 @@ php artisan view:clear
 
 
 sudo service apache2 restart
+
 
